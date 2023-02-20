@@ -1,0 +1,37 @@
+#include<stdio.h>
+int main()
+{
+    int b,c,i=0,j=0,mid,low=0;
+    int a[100];
+    printf("no of input");
+    scanf("%d",&c);
+    for(int j=0;j<=c-1;j++)
+    {
+        scanf("%d",&a[j]);
+    }
+    printf("enter number=");
+    scanf("%d",&b);
+    while(low!=c)
+    {
+        mid=(low+c)/2;
+        if(b==a[mid])
+        {
+            printf("position is %d",mid);
+            break;
+        }
+        else if(b>a[mid])
+        {
+            low=mid+1;
+        }
+        else
+        {
+            c=mid;
+        }
+    }
+    if(a[mid]!=b)
+    {
+        printf("not found");
+    }
+return 0;
+}
+        
